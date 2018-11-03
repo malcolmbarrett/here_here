@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+author: "Malcolm Barrett"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r fail, error=TRUE}
+library(tidyverse)
+read_csv("data/mtcars.csv")
+```
+
+```{r herehere}
+library(here)
+read_csv(here("data", "mtcars.csv"))
+ggplot(mtcars, aes(mpg, hp)) + geom_point()
+ggsave(here("figs", "mpg_hp.png"))
+```
+
+
+
+
