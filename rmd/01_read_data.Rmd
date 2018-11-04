@@ -20,6 +20,13 @@ read_csv("data/mtcars.csv")
 ```{r herehere}
 library(here)
 read_csv(here("data", "mtcars.csv"))
+```
+
+```{r manual}
+read_csv("../data/mtcars.csv")
+```
+
+```{r ggplot}
 ggplot(mtcars, aes(mpg, hp)) + geom_point()
 ggsave(here("figs", "mpg_hp.png"))
 ```
